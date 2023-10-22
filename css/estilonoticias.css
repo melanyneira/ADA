@@ -1,0 +1,229 @@
+
+#carrusel {
+    height: 70%;
+    width: 57%;
+
+    margin-top: 1%;
+    margin-left: 4%;
+    margin-right: 25px;
+    box-shadow: 1px 5px 8px black;
+    display: block;
+    float: left;
+
+}
+
+#img-carru {
+    width: 100%;
+    height: 500px;
+}
+
+.parrCarr {
+    color: white;
+    text-shadow: 0px 4px 6px rgb(0, 0, 0);
+}
+
+.seccion2 {
+
+    margin-left: 30px;
+
+}
+
+.caja1 {
+    width: 30%;
+    height: 246px;
+    margin-top: 1.5%;
+    padding-left: 2px;
+    background-image: url(img/congresoArgentina.jpg);
+
+    background-size: cover;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.537);
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.8s;
+    transform-origin: right;
+
+}
+
+.caja2 {
+    width: 30%;
+    height: 246px;
+    margin-top: 1.2%;
+    padding-left: 0px;
+    background-image: url(img/Imagenfeminismonoticia.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.537);
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.8s;
+    transform-origin: right;
+
+}
+
+.caja1 a {
+    text-decoration: none;
+}
+
+.caja2 a {
+    text-decoration: none;
+}
+
+.caja1 h2 {
+    color: rgb(240, 234, 234);
+    font-size: 13px;
+    background-color: #252424be;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 2%;
+    margin-top: 55%;
+    padding-bottom: 2%;
+    text-decoration: none;
+    display: block;
+    flex-direction: row;
+}
+
+.caja2 h2 {
+    color: rgb(240, 234, 234);
+    font-size: 13px;
+    background-color: #252424be;
+    border-radius: 0px 0px 10px 10px;
+    padding-top: 4%;
+    margin-top: 55%;
+    padding-bottom: 2%;
+    text-decoration: none;
+    display: block;
+    flex-direction: row;
+}
+
+.caja1 img {
+    width: 55%;
+    height: 90%;
+    padding-top: 10px;
+    margin-right: 2px;
+}
+
+
+
+.caja3 {
+    width: 20%;
+    height: 300px;
+    margin-top: 5%;
+    margin-left: 4%;
+    border: 1px solid rgba(7, 5, 5, 0);
+    display: block;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0.7px rgba(0, 0, 0, 0.498);
+    border-radius: 10px;
+    transition: transform 0.8s;
+    transform-origin: center;
+}
+
+.caja3:hover {
+    transform: scaleX(1.06) scaleY(1.02);
+}
+
+.caja3 h4 {
+    color: black
+}
+
+
+#link {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 1px 4px 8px rgb(0, 0, 0);
+
+}
+
+
+/* Estilo para el encabezado */
+
+
+#divisor {
+    height: 60px;
+    margin-top: 25px;
+
+    color: #fff;
+    padding: 30px;
+    background: linear-gradient(to bottom, #33353dc0, #0b0b0d);
+}
+
+#divisor h2 {
+    margin-top: -20px;
+
+}
+
+/* Estilo para el contenedor de noticias */
+#noticias {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#leyes {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 60px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Estilo para cada tarjeta de noticia */
+.noticia {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0.7px rgba(0, 0, 0, 0.498);
+    margin-bottom: 20px;
+    width: 25%;
+    height: 400px;
+    width: calc(25% - 28px);
+    /* Mostrar tres noticias por fila */
+    padding: 20px;
+    transition: transform 0.8s;
+    transform-origin: center;
+}
+
+/* Estilo para el título de la noticia */
+.noticia h2 {
+
+    font-size: 1rem;
+    margin-bottom: 10px;
+
+}
+
+.noticia h2 a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilo para la descripción de la noticia */
+.noticia p {
+    text-decoration: none;
+    font-size: 0.6em;
+    color: #555;
+    margin-bottom: -2%;
+}
+
+/* Estilo para las imágenes de las noticias */
+.noticia img {
+
+    max-width: 100%;
+    height: 200px;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.noticia:hover {
+    transform: scaleX(1.06) scaleY(1.02);
+}
