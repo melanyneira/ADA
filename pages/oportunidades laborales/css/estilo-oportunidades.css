@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  height: 66px;
+  padding: 5px 0px;
+  background: rgb(240, 226, 241);
+  position: fixed; 
+  z-index: 1000; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.070);
+  
+}
+
+.navegacion{
+	width: 1000px;
+	margin-left: 120px;
+}
+
+.navegacion ul{
+	list-style: none;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.menu > li > a{
+	display: block;
+	padding: 20px 20px;
+	color: #000000;
+	text-decoration: none;
+    font-size: 17.5px;
+    font-family: 'Gloock', serif;
+
+}
+
+.menu #zona a:hover{
+	color: #cd99ca;
+	transition: all .3s;
+}
+
+/* SUBMENÚ*/
+
+.submenu{
+	position: absolute;
+	background: #333333;
+	width: 140%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Hind Guntur', sans-serif;
+    font-size: 14.2px;
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+#logo {
+    margin-top: -20px;
+    padding-left: 10px;
+    position: absolute;
+}
+
+#perfil, #lupa { 
+    margin-top: 6px;
+    margin-right: 20px;
+    float: right;
+}
+
+#subtitulo2{
+    color:  rgb(141, 177, 216);
+    font-family: 'Gloock', serif;
+    font-size: 35px;
+    margin-top: 40px; 
+    padding-top: 42px;
+    margin-left: 518px;
+}
+
+#subtitulo1{
+    color:rgba(0, 0, 0, 0.763);
+    font-family: 'Gloock', serif; 
+    margin-left: 16px;
+    margin-top: 420px;
+
+}
+
+h3{ 
+    color: black (10 47 241);
+}
+
+main{
+    /* background-color: #e8f1f9; */
+    background: linear-gradient(to bottom, #e8f1f9, #e8f1f9, #e8f1f9, #ffffff);
+    height: 600px; /* 490 */
+}
+
+/* DECORACIONES */
+
+#puntitos{
+   float: left;
+   margin-left: 10px;
+   margin-top: -68px ;
+   height: 78px;
+}
+
+#flor{
+   width: 147px;
+   float: right;
+   margin-top: 245px;
+   margin-right: 3px;
+}
+
+#dos{
+    width: 180px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px 8px 45px 0px;
+    float: left;
+    min-width: 100%;
+}
+
+.uno, .tres, .cuatro, .cinco, .seis{ 
+    width: 180px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px 8px 45px 0px;
+    float: left;
+    min-width: 100%;
+    opacity: 89%;
+}
+
+
+#swiper-contenedor{
+    height: 1100px;
+    margin-top: -30px;
+}
+
+
+.contenedor{
+    width: 250px;
+    height: 315px;
+    padding-right: 0;
+    border-radius: 8px 8px 8px 8px;
+    border: 1px solid rgba(0, 0, 0, 0.288);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    float: left;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.cargo{
+    margin-top: 168px;
+    font-size: 20px;
+    font-family:'Bebas Neue', sans-serif;
+}
+
+.fecha{
+    color: #696969;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+    padding-left: 31px;
+    padding-top: 15px;
+}
+
+.textocargo{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000;
+    text-align: left;
+    padding-left: 31px;
+}
+
+.botón{
+    background-color: rgb(194, 142, 196);
+    width: 100%;
+    height: 42px;
+    font: inherit ;
+    color: white;
+    border: none;
+    font: inherit;  
+    border-radius: 0px 0px 7px 7px;
+    margin-top: 22px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.botón:hover{
+    color: white;
+    background-color:rgb(207, 168, 213); 
+}
+
+
+.botón2{
+    background-color: rgb(141, 177, 216);
+    width: 100%;
+    height: 42px;
+    font: inherit ;
+    color: white;
+    border: none;
+    border-radius: 0px 0px 7px 7px;
+    margin-top: 6px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.botón2:hover{
+    color: white;
+    background-color: rgba(154, 187, 224, 0.936);
+}
+
+
+.footer{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(248, 227, 240); 
+}
+
+#botón-final{
+    background-color: white;
+    width: 190px;
+    height: 38px;
+    font-size: 18.2px;
+    color: rgba(0, 0, 0, 0.884);
+    border-radius: 4px;
+    border: 1px solid black;
+    margin-top: 1%;
+    margin-left: 43%;
+    font-family: 'Bebas Neue', sans-serif
+}
