@@ -79,10 +79,16 @@ const trailUpdate = () => {
 // Start interval for slides
 let start = setInterval(() => slide("increase"), interval)
 
-// Next  and  Previous button function (SVG icon with different classes)
+// Next and Previous button function (SVG icon with different classes)
 document.querySelectorAll("svg").forEach(cur => {
-    // Assign function based on the class Name("next" and "prev")
-    cur.addEventListener("click", () => cur.classList.contains("siguiente") ? slide("increase") : slide("decrease"))
+    // Assign function based on the class Name ("next" and "prev")
+    cur.addEventListener("click", () => {
+        if (cur.classList.contains("next")) {
+            slide("increase"); // Botón "Next" (avanzar)
+        } else if (cur.classList.contains("prev")) {
+            slide("decrease"); // Botón "Previous" (retroceder)
+        }
+    });
 })
 
 // function to slide when trail is clicked
