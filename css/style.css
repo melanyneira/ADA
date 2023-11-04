@@ -6,54 +6,109 @@ body {
     
 }
 
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
 header {
-    width: 100%;
-    height: 64px;
-    background: rgb(249, 226, 255);
-}
-
-.logo {
-    width: 62px;
-    height: 62px;
-    padding: 3px;
-    position: absolute;
+width: 100%;
+height: 66px;
+padding: 5px 0px;
+background: rgb(240, 226, 241);
+position: fixed; 
+z-index: 1000; 
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.070);
 
 }
 
-nav {
-    margin: 0 auto;
+.navegacion{
+width: 1000px;
+margin-left: 120px;
 }
 
-nav ul {
-    float: right;
-    margin: 0 auto;
-    padding: 10px;
+.navegacion ul{
+list-style: none;
 }
 
-nav ul li {
-    display: inline-block;
-    margin-right: 10px
+.menu > li{
+position: relative;
+display: inline-block;
 }
 
-nav ul li a {
-    display: inline-block;
-    padding: 10px;
-    color: rgb(196, 145, 212);
-    border: rgb(196, 145, 212) 1px solid;
-    text-decoration: none;
-    border-radius: 10px;
-    text-transform: uppercase;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: bold;
+.menu > li > a{
+display: block;
+padding: 20px 20px;
+color: #000000;
+text-decoration: none;
+font-size: 17.5px;
+font-family: 'Gloock', serif;
 }
 
-nav ul li a:hover {
-    background: bisque;
-    color: #c834f1;
+.menu #secciones a:hover{
+	color: #cd99ca;
+	transition: all .3s;
 }
+
+/* SUBMENÚ*/
+
+.submenu{
+  margin-top: -4.5px;
+  margin-left: 9px;
+	position: absolute;
+	background: #333333f3;
+	width: 95%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+
+.submenu li a{
+	display: block;
+	padding: 11px;
+	color: #fff;
+	font-family: 'Hind Guntur', sans-serif;
+  font-size: 14.4px;
+	text-decoration: none;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+#logo {
+  margin-top: -20px;
+  padding-left: 10px;
+  position: absolute;
+}
+
+#perfil, #lupa { 
+  margin-top: 6px;
+  margin-right: 20px;
+  float: right;
+}
+
+h3{ 
+  color: black (10 47 241);
+}
+
+/* FONDO */
+
+main{
+  background: linear-gradient(to right bottom, #e8f1f9, #ffffff, #f6e2f6 );
+  height: 85rem;
+}
+
+/* CARROUSEL */
 
 .splash {
-   /*  background: url("/img/imagenfondo-index.jpg") center center fixed; */
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -92,41 +147,11 @@ nav ul li a:hover {
     padding-top: 100px;
 }
 
-.boton {
-    text-decoration: none;
-    background: #cd9ae8;
-    color: bisque;
-    padding: 10px;
-    border: #cd9ae8 1px solid;
-    border-radius: 10px;
-    text-transform: uppercase;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: bold;
-}
-
-.boton:hover {
-    background: rgb(252, 196, 255);
-    color: #c834f1;
-}
-
-.centrar {
-    margin: 0 auto;
-}
-
-
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: initial;
-}
-
 html {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
   font-size: 70%;
 }
+
 @media only screen and (max-width: 800px) {
   html {
     font-size: 57%;
@@ -139,29 +164,33 @@ html {
   }
 }
 
+/* POSICIÓN SLIDER */
+
 .contenedor-slider{
-    padding: 0px;
+   margin-top: 0px;
+   width: 97%;
+   margin-left: 30px;
 }
 
 .contenedor {
   position: relative;
   top: -720px;
   overflow: hidden;
-  border-radius: 7rem; /* 8rem */
+  border-radius: 7rem; 
+}
+
+.slider {
+  display: flex;
+  width: 500%;
+  height: 53rem;
+  transition: all 0.25s ease-in;
+  transform: translateX(0);
 }
 
 @media only screen and (max-width: 500px) {
   .contenedor {
     border-radius: 0;
   }
-}
-
-.slider {
-  display: flex;
-  width: 500%;
-  height: 48rem;
-  transition: all 0.25s ease-in;
-  transform: translateX(0);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -253,7 +282,6 @@ html {
   }
 }
 
-/* Fonts */
 .slider .caja .details h1 {
   font-size: 3.5rem;
   font-weight: 500;
@@ -278,9 +306,11 @@ html {
 }
 
 .slider .caja .details button {
-  padding: 1rem 3rem;
+  margin-top: 28px;
+  padding: 9px 30px;
+  display: flex;
   color: #fff;
-  border-radius: 2rem;
+  border-radius: 18px;
   outline: none;
   border: none;
   cursor: pointer;
@@ -339,7 +369,7 @@ html {
   background-color: #66eaea; /* cuadrado arriba */
 }
 .slider .caja4-slider button {
-  background-color: #71d0f3; /* boton */
+  background-color: #66eaea; /* boton */
 }
 .slider .caja5-slider {
   /* background: url("/img/foro.jpg") top left fixed; */

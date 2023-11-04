@@ -1,6 +1,5 @@
 html {
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
     font-size: 70%;
   }
   @media only screen and (max-width: 800px) {
@@ -9,50 +8,97 @@ html {
     }
   }
 
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+/* HEADER */
+
 header {
     width: 100%;
-    height: 64px;
-    background:  rgb(249, 226, 255);
-}
-
-.logo {
-    width: 62px;
-    height: 62px;
-    padding: 3px;
-}
-
-nav {
-    margin: 0 auto;
-}
-
-nav ul {
-    float: right;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-nav ul li {
+    height: 66px;
+    padding: 5px 0px;
+    background: rgb(240, 226, 241);
+    position: fixed; 
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.070);
+    
+    }
+    
+    .navegacion{
+    width: 1000px;
+    margin-left: 120px;
+    }
+    
+    .navegacion ul{
+    list-style: none;
+    }
+    
+    .menu > li{
+    position: relative;
     display: inline-block;
-    margin-right: 10px
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 10px;
-    color: #cd9ae8;
-    border: #cd9ae8 1px solid;
+    }
+    
+    .menu > li > a{
+    display: block;
+    padding: 20px 20px;
+    color: #000000;
     text-decoration: none;
-    border-radius: 10px;
-    text-transform: uppercase;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: bold;
-}
+    font-size: 17.5px;
+    font-family: 'Gloock', serif;
+    }
+    
+    .menu #secciones a:hover{
+        color: #cd99ca;
+        transition: all .3s;
+    }
+    
+    /* SUBMENÚ*/
+    
+    .submenu{
+      margin-top: -5px;
+      margin-left: 9px;
+        position: absolute;
+        background: #333333;
+        width: 95%;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1.5s;
+    }
+    
+    .submenu li a{
+        display: block;
+        padding: 11px;
+        color: #fff;
+        font-family: 'Hind Guntur', sans-serif;
+      font-size: 14.4px;
+        text-decoration: none;
+    }
+    
+    .menu li:hover .submenu{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    
+    #logo {
+      margin-top: -20px;
+      padding-left: 10px;
+      position: absolute;
+    }
+    
+    #perfil, #lupa { 
+      margin-top: 6px;
+      margin-right: 20px;
+      float: right;
+    }
+    
+    h3{ 
+      color: black (10 47 241);
+    }
 
-nav ul li a:hover {
-    background: bisque;
-    color: #c834f1;
-}
-
+    
 ::before,
 ::after {
     margin: 0;
@@ -61,13 +107,15 @@ nav ul li a:hover {
 }
 
 body {
-    background:  #cd9ae8;
-    background: -webkit-linear-gradient(to right, #cd9ae8, bisque);
-    background: linear-gradient(to top, bisque, #cd9ae8);
-    font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(to top, bisque, #cd9ae8); */
+   /*  background: linear-gradient(to top left, rgb(254, 245, 234), white, rgb(240, 226, 241)); */
+   background: linear-gradient(to right bottom, #e8f1f9, #ffffff, #f6e2f6 );
+    font-family: 'Lato', sans-serif;
     width: 100%;
-    height: 100vh;
+    height: 900px;
 }
+
+/* ESTILO FORMULARIO */
 
 h1 {
     color: #040303;
@@ -79,27 +127,30 @@ h1 {
     margin-bottom: 10px;
 }
 
-.h1-contacto {
+.contacto {
     color: #050505;
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-style: bold;
     text-transform: uppercase;
-    padding-top: 20px;
+    padding-top: 30px;
     margin-bottom: 10px;
 }
 
-form {
-    margin-top: 150px;
-    position: relative;
+form { 
+    width: 45%;
+    height: 60rem;
     background: #fff;
-    width: 70;
+    margin-top: 45px;
+    position: relative;
     border-radius: 10px;
-    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    /* box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8); */
+    box-shadow: 2px 2px 5px rgba(48, 47, 47, 0.1);
+    margin: auto;
+   
 }
 
 .form {
-    width: 100%;
     margin: 0 auto
 }
 
@@ -165,15 +216,13 @@ textarea:focus~.barra::before {
     width: 0%;
     bottom: 0;
     position: absolute;
-    background: linear-gradient(to right, bisque, #8f5100);
+    background: linear-gradient(to right, bisque, #cd9ae8);
     transition: 0.3s ease all;
     left: 0%;
 }
 
 .boton-submit {
-    background: #c06aee;
-    background: -webkit-linear-gradient(to right, #8f5100, bisque);
-    background: linear-gradient(to center, bisque, #8f5100);
+    background: linear-gradient(to right,  #cd9ae8, bisque);
     width: 100px;
     height: 40px;
     border: none;
@@ -191,8 +240,7 @@ textarea:focus~.barra::before {
     background: bisque;
     color: #c834f1;
     border-radius: 20px 20px 20px 20px;
-    border: 2px;
-    border-color: black;
+    border: 1px black;
 }
 
 @media screen and (max-width:1100px) {
@@ -226,3 +274,67 @@ footer {
 .formulario-contacto{
     padding: 10rem;
 }
+
+/* BOTÓN FINAL */
+.custom-button {
+    height: 35px;
+    width: 100px;
+    text-align: left;
+    margin-left: 42%;
+    display: inline-block;
+    position: relative;
+    background-color: #ffffff; /* Cambia el color de fondo según tus preferencias */
+    color: #000000; /* Cambia el color del texto según tus preferencias */
+    padding: 9px 9px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border-color: rgb(59, 58, 58);
+    font-family: 'Gloock', sans-serif;
+  }
+  
+  .custom-button::before,
+  .custom-button::after {
+    content: '';
+    position: absolute;
+    transition: all 0.5s;
+  }
+  
+  .custom-button::before {
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 50%;
+    background-color: #800080; /* Cambia el color según tus preferencias */
+    filter: blur(8px);
+  }
+  
+  .custom-button::after {
+    width: 3rem;
+    height: 3rem;
+    right: 1.5rem;
+    top: 1.5rem;
+    border-radius: 50%;
+    background-color: #f5a0cb; /* Cambia el color según tus preferencias */
+    filter: blur(8px);
+  }
+  
+  .custom-button:hover {
+    border-color: rgb(173, 126, 174); /* Cambia el color del borde al hacer hover */
+    /* color: rgb(173, 126, 174); */
+    text-decoration: none;
+  }
+  
+  .custom-button:hover::after {
+    right: -0rem;
+    top: 1.5rem;
+  }
+  
+  .custom-button:hover::before {
+    right: 3rem;
+    top: 0.5rem;
+  }
+  

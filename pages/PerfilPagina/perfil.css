@@ -105,20 +105,6 @@ h1 {
     margin: 20px 0;
 }
 
-button{
-    background-color: rgb(194, 142, 196);
-    border: none;
-    outline: none;
-    width: 140px;
-    height: 42px;
-    font: inherit ;
-    color: white;
-    border: none;
-    font: inherit;  
-    border-radius: 8px;
-    margin-top: 22px;
-    cursor: pointer;
-}
 /* 
 button::before{
     content: '';
@@ -162,3 +148,31 @@ button::before{
     text-decoration: none;
 }
 
+button {
+    height: 45px;
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: rgb(205, 152, 207);
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all .3s ease;
+    box-shadow:rgb(186, 129, 189) 0px 8px 0px 0px;
+    color: hsl(0, 0%, 100%);
+   }
+   
+   button:hover {
+    box-shadow: rgb(186, 129, 189) 0px 7px 0px 0px;
+   }
+   
+   button:active {
+    background-color: rgb(205, 152, 207);
+    /*50, 168, 80*/
+    box-shadow: rgb(186, 129, 189) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+   }
+
+.profile{
+    height: 90px;
+}
