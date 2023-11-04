@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmación de Envío</title>
+    <link rel="icon" href="/pages/oportunidades laborales/images/ADA.png">
     <link rel="stylesheet" href="css/footer.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,87 +17,114 @@
     
 <style>
 
-body {
-    background-color: #e4d9e384;
+main{
+    background: linear-gradient(to right bottom, #e8f1f9, #ffffff, #f6e2f6 );
+    height: 900px;
 }
 
-*,
-*:before,
-*:after {
+*{
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
 
-html {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-size: 70%;
-}
-@media only screen and (max-width: 800px) {
-  html {
-    font-size: 57%;
-  }
-}
+
+/* HEADER */
 
 header {
     width: 100%;
-    height: 64px;
-    background: rgb(249, 226, 255);
-}
-
-.logo {
-    width: 62px;
-    height: 62px;
-    padding: 3px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-nav {
-    margin: 0 auto;
-}
-
-nav ul {
-    float: right;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-nav ul li {
+    height: 60px;
+    padding: 5px 0px;
+    background: rgb(240, 226, 241);
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.070);
+    
+    }
+    
+    .navegacion{
+    width: 1000px;
+    margin-left: 120px;
+    }
+    
+    .navegacion ul{
+    list-style: none;
+    }
+    
+    .menu > li{
+    position: relative;
     display: inline-block;
-    margin-right: 10px
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 10px;
-    color: rgb(196, 145, 212);
-    border: rgb(196, 145, 212) 1px solid;
+    }
+    
+    .menu > li > a{
+    display: block;
+    padding: 20px 20px;
+    color: #000000;
     text-decoration: none;
-    border-radius: 10px;
-    text-transform: uppercase;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: bold;
-}
+    font-size: 17.5px;
+    font-family: 'Gloock', serif;
+    }
+    
+    .menu #secciones a:hover{
+        color: #cd99ca;
+        transition: all .3s;
+    }
+    
+    /* SUBMENÚ*/
+    
+    .submenu{
+      margin-top: -5px;
+      margin-left: 9px;
+        position: absolute;
+        background: #333333;
+        width: 95%;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1.5s;
+    }
+    
+    .submenu li a{
+        display: block;
+        padding: 11px;
+        color: #fff;
+        font-family: 'Hind Guntur', sans-serif;
+      font-size: 14.4px;
+        text-decoration: none;
+    }
+    
+    .menu li:hover .submenu{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    
+    #logo {
+      margin-top: -20px;
+      padding-left: 10px;
+      position: absolute;
+    }
+    
+    #perfil, #lupa { 
+      margin-top: 6px;
+      margin-right: 20px;
+      float: right;
+    }
+    
+    h3{ 
+      color: black (10 47 241);
+    }
 
-nav ul li a:hover {
-    background: bisque;
-    color: #c834f1;
-}
 
 /* Estilo Mensaje Enviado (YAMI)*/
 
     #mensaje-enviado {
-    background-color: white; /* Fondo lila */
+    background-color: white;
     border-radius: 10px 10px 10px 10px;
     margin: auto;
     margin-top: 100px;
     width: 36.5%;
     height: 276px;
     border: 2px  #c4c1c1d0; 
-    box-shadow: 2px 2px 5px rgba(48, 47, 47, 0.1); 
+    /* box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8); */
+    box-shadow: 2px 2px 5px rgba(48, 47, 47, 0.1);
     }
 
 
@@ -146,20 +174,32 @@ nav ul li a:hover {
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="/index.html">
-                <img src="./img/ADA.logo.png" alt="logo_empresa" class="logo">
-            </a>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="about.html">Nosotros</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li><a href="Login.html">Login/Registrarse</a></li>
 
+    <main>
+    <header>
+
+        <a href="index.html" id="logo"><img src="/pages/oportunidades laborales/images/ADA.png" alt="" title="Ada" style=" padding-top: 6px; width: 90px; height: 89px;"></a>
+         
+        <a href="" id="lupa"><img src="/pages/oportunidades laborales/images/lupa.png" alt="" title="Buscar" style="width: 40px; margin-top: 0.4;"></a>
+        <a href="perfil.html" id="perfil"><img src="/pages/oportunidades laborales/images/user.png" alt="" title="Mi Perfil" style="width: 40px;"></a>
+        
+         <nav class="navegacion" >
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre nosotras</a></li>
+                <li id="secciones"><a href="#">¿Cómo podemos ayudarte?</a>
+                  <ul class="submenu">
+                      <li><a href="#">Recursos y Asesoramiento</a></li>
+                      <li><a href="#">Educación y Prevención</a></li>
+                      <li><a href="#">Programas y Capacitaciones</a></li>
+                      <li><a href="#">Oportunidades Laborales</a></li>
+                      <li><a href="#">Foro</a></li>
+                  </ul>
+              </li>
+                <li><a href="/pages/contact/Contact.html">Contáctanos</a></li>
             </ul>
         </nav>
-    </header>
+        </header> 
 
     <div id="mensaje-enviado">
     
@@ -171,6 +211,8 @@ nav ul li a:hover {
         <a href="../../index.html"><button type="button" class="botón">Volver al Inicio</button></a>
     </div>
 
+</main>
+<!-- 
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -213,6 +255,6 @@ nav ul li a:hover {
             </div>
         </div>
     </footer>
-
+ -->
 </body>
 </html>
