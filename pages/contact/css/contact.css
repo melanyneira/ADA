@@ -1,0 +1,340 @@
+html {
+    box-sizing: border-box;
+    font-size: 70%;
+  }
+  @media only screen and (max-width: 800px) {
+    html {
+      font-size: 57%;
+    }
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 66px;
+    padding: 5px 0px;
+    background: rgb(240, 226, 241);
+    position: fixed; 
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.070);
+    
+    }
+    
+    .navegacion{
+    width: 1000px;
+    margin-left: 120px;
+    }
+    
+    .navegacion ul{
+    list-style: none;
+    }
+    
+    .menu > li{
+    position: relative;
+    display: inline-block;
+    }
+    
+    .menu > li > a{
+    display: block;
+    padding: 20px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 17.5px;
+    font-family: 'Gloock', serif;
+    }
+    
+    .menu #secciones a:hover{
+        color: #cd99ca;
+        transition: all .3s;
+    }
+    
+    /* SUBMENÚ*/
+    
+    .submenu{
+      margin-top: -5px;
+      margin-left: 9px;
+        position: absolute;
+        background: #333333;
+        width: 95%;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1.5s;
+    }
+    
+    .submenu li a{
+        display: block;
+        padding: 11px;
+        color: #fff;
+        font-family: 'Hind Guntur', sans-serif;
+      font-size: 14.4px;
+        text-decoration: none;
+    }
+    
+    .menu li:hover .submenu{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    
+    #logo {
+      margin-top: -20px;
+      padding-left: 10px;
+      position: absolute;
+    }
+    
+    #perfil, #lupa { 
+      margin-top: 6px;
+      margin-right: 20px;
+      float: right;
+    }
+    
+    h3{ 
+      color: black (10 47 241);
+    }
+
+    
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(to top, bisque, #cd9ae8); */
+   /*  background: linear-gradient(to top left, rgb(254, 245, 234), white, rgb(240, 226, 241)); */
+   background: linear-gradient(to right bottom, #e8f1f9, #ffffff, #f6e2f6 );
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 900px;
+}
+
+/* ESTILO FORMULARIO */
+
+h1 {
+    color: #040303;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: bold;
+    text-transform: uppercase;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.contacto {
+    color: #050505;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: bold;
+    text-transform: uppercase;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+form { 
+    width: 45%;
+    height: 60rem;
+    background: #fff;
+    margin-top: 45px;
+    position: relative;
+    border-radius: 10px;
+    /* box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8); */
+    box-shadow: 2px 2px 5px rgba(48, 47, 47, 0.1);
+    margin: auto;
+   
+}
+
+.form {
+    margin: 0 auto
+}
+
+form .grupo {
+    position: relative;
+    margin: 45px;
+}
+
+input,
+textarea {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+    resize: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    color: rgb(94, 93, 93);
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #8f5100;
+}
+
+label {
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~.barra::before,
+textarea:focus~.barra::before {
+    width: 100%;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: '';
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, bisque, #cd9ae8);
+    transition: 0.3s ease all;
+    left: 0%;
+}
+
+.boton-submit {
+    background: linear-gradient(to right,  #cd9ae8, bisque);
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 50%;
+    margin-top: 20px;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+}
+
+.boton-submit:hover {
+    background: bisque;
+    color: #c834f1;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px black;
+}
+
+@media screen and (max-width:1100px) {
+    form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:300px) {
+    form {
+        width: 100%;
+    }
+}
+
+footer {
+    margin-top: 200px;
+}
+
+.formulario-contacto{
+    padding: 10rem;
+}
+
+/* BOTÓN FINAL */
+.custom-button {
+    height: 35px;
+    width: 100px;
+    text-align: left;
+    margin-left: 42%;
+    display: inline-block;
+    position: relative;
+    background-color: #ffffff; /* Cambia el color de fondo según tus preferencias */
+    color: #000000; /* Cambia el color del texto según tus preferencias */
+    padding: 9px 9px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border-color: rgb(59, 58, 58);
+    font-family: 'Gloock', sans-serif;
+  }
+  
+  .custom-button::before,
+  .custom-button::after {
+    content: '';
+    position: absolute;
+    transition: all 0.5s;
+  }
+  
+  .custom-button::before {
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 50%;
+    background-color: #800080; /* Cambia el color según tus preferencias */
+    filter: blur(8px);
+  }
+  
+  .custom-button::after {
+    width: 3rem;
+    height: 3rem;
+    right: 1.5rem;
+    top: 1.5rem;
+    border-radius: 50%;
+    background-color: #f5a0cb; /* Cambia el color según tus preferencias */
+    filter: blur(8px);
+  }
+  
+  .custom-button:hover {
+    border-color: rgb(173, 126, 174); /* Cambia el color del borde al hacer hover */
+    /* color: rgb(173, 126, 174); */
+    text-decoration: none;
+  }
+  
+  .custom-button:hover::after {
+    right: -0rem;
+    top: 1.5rem;
+  }
+  
+  .custom-button:hover::before {
+    right: 3rem;
+    top: 0.5rem;
+  }
+  

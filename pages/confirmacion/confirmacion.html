@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Envío</title>
+    <link rel="icon" href="/pages/oportunidades laborales/images/ADA.png">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap" rel="stylesheet">
+    
+<style>
+
+main{
+    background: linear-gradient(to right bottom, #e8f1f9, #ffffff, #f6e2f6 );
+    height: 900px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 60px;
+    padding: 5px 0px;
+    background: rgb(240, 226, 241);
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.070);
+    
+    }
+    
+    .navegacion{
+    width: 1000px;
+    margin-left: 120px;
+    }
+    
+    .navegacion ul{
+    list-style: none;
+    }
+    
+    .menu > li{
+    position: relative;
+    display: inline-block;
+    }
+    
+    .menu > li > a{
+    display: block;
+    padding: 20px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 17.5px;
+    font-family: 'Gloock', serif;
+    }
+    
+    .menu #secciones a:hover{
+        color: #cd99ca;
+        transition: all .3s;
+    }
+    
+    /* SUBMENÚ*/
+    
+    .submenu{
+      margin-top: -5px;
+      margin-left: 9px;
+        position: absolute;
+        background: #333333;
+        width: 95%;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1.5s;
+    }
+    
+    .submenu li a{
+        display: block;
+        padding: 11px;
+        color: #fff;
+        font-family: 'Hind Guntur', sans-serif;
+      font-size: 14.4px;
+        text-decoration: none;
+    }
+    
+    .menu li:hover .submenu{
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    
+    #logo {
+      margin-top: -20px;
+      padding-left: 10px;
+      position: absolute;
+    }
+    
+    #perfil, #lupa { 
+      margin-top: 6px;
+      margin-right: 20px;
+      float: right;
+    }
+    
+    h3{ 
+      color: black (10 47 241);
+    }
+
+
+/* Estilo Mensaje Enviado (YAMI)*/
+
+    #mensaje-enviado {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    margin: auto;
+    margin-top: 100px;
+    width: 36.5%;
+    height: 276px;
+    border: 2px  #c4c1c1d0; 
+    /* box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8); */
+    box-shadow: 2px 2px 5px rgba(48, 47, 47, 0.1);
+    }
+
+
+    h1{
+        color: white;
+        font-size: 25px;
+        border-radius: 10px 10px 0px 0px;
+        margin-top: 12px;
+        display: flex;
+        background-color: rgb(192, 130, 195);
+        padding-left: 20px;
+        padding-top: 8px;
+        height: 60px;
+    }
+
+    #subtitulo{
+        margin-top: 15px;
+        padding-left: 14.6%;
+        font-family: 'Gloock', serif;
+        font-weight: 100;
+    }
+
+    #texto{
+        margin-left: 10px;
+        text-align: center;
+        font-size: 19px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 100;
+        margin-top: 20px;
+    }
+
+    .botón{
+    background-color: white;
+    width: 157px;
+    height: 32px;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.884);
+    border-radius: 4px;
+    border: 1px solid black;
+    margin-top: 4.5%;
+    margin-left: 38.5%;
+    font-family: 'Bebas Neue', sans-serif
+}
+
+</style>
+
+</head>
+
+<body>
+
+    <main>
+    <header>
+
+        <a href="index.html" id="logo"><img src="/pages/oportunidades laborales/images/ADA.png" alt="" title="Ada" style=" padding-top: 6px; width: 90px; height: 89px;"></a>
+         
+        <a href="" id="lupa"><img src="/pages/oportunidades laborales/images/lupa.png" alt="" title="Buscar" style="width: 40px; margin-top: 0.4;"></a>
+        <a href="perfil.html" id="perfil"><img src="/pages/oportunidades laborales/images/user.png" alt="" title="Mi Perfil" style="width: 40px;"></a>
+        
+         <nav class="navegacion" >
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre nosotras</a></li>
+                <li id="secciones"><a href="#">¿Cómo podemos ayudarte?</a>
+                  <ul class="submenu">
+                      <li><a href="#">Recursos y Asesoramiento</a></li>
+                      <li><a href="#">Educación y Prevención</a></li>
+                      <li><a href="#">Programas y Capacitaciones</a></li>
+                      <li><a href="#">Oportunidades Laborales</a></li>
+                      <li><a href="#">Foro</a></li>
+                  </ul>
+              </li>
+                <li><a href="/pages/contact/Contact.html">Contáctanos</a></li>
+            </ul>
+        </nav>
+        </header> 
+
+    <div id="mensaje-enviado">
+    
+        <h1><img src="images/correorecibido.png" style="height: 50px;">
+        <p id="subtitulo">¡Correo envíado con éxito!</p></h1>
+        <p id="texto"> <strong style="font-family: 'Gloock', serif; font-weight: 100; font-size: 20px;">Gracias por contactarnos.</strong> <br> <br> Tu mensaje ha sido enviado correctamente. <br> Nos pondremos en contacto contigo pronto.</p>
+        <img src="images/puntosnegros.png" style="height: 70px; float: right; margin-right: -16px; margin-top: 46px;">
+
+        <a href="../../index.html"><button type="button" class="botón">Volver al Inicio</button></a>
+    </div>
+
+</main>
+<!-- 
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify">Un espacio diseñado para ayudar a mujeres que
+                        sufren violencia y no cuentan con recursos o asistencia.
+                        No solo será una herramienta de apoyo, sino también un medio para empoderarlas.</p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Redes Sociales</h6>
+                    <ul class="footer-links">
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/">Instagram</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Links importantes</h6>
+                    <ul class="footer-links">
+                        <li><a href="About.html">Nosotros</a></li>
+                        <li><a href="Contact.html">Contáctanos!</a></li>
+                        <li><a href="index.html/.descripcion espacios">Inicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright
+                        <a href="#">ADA</a>.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+ -->
+</body>
+</html>
